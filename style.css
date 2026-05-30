@@ -1,0 +1,406 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+
+    margin:0;
+
+    font-family:'Trebuchet MS',Arial,sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #e8faf7,
+        #c8f2eb,
+        #9de3d8
+    );
+
+    color:#1f2937;
+
+    min-height:100vh;
+}
+
+/* ------------------ */
+/* PAGES */
+/* ------------------ */
+
+.page{
+
+    display:none;
+
+    text-align:center;
+
+    padding:25px;
+}
+
+.active{
+
+    display:block;
+}
+
+/* ------------------ */
+/* HERO */
+/* ------------------ */
+
+.hero-img{
+
+    width:280px;
+
+    max-width:90%;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.15);
+
+    animation:
+    float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* ------------------ */
+/* WAITING SPONGEBOB */
+/* ------------------ */
+
+.waiting-img{
+
+    position:fixed;
+
+    bottom:15px;
+
+    right:15px;
+
+    width:180px;
+
+    opacity:0;
+
+    transition:opacity 2s ease;
+
+    pointer-events:none;
+
+    z-index:999;
+}
+
+.waiting-visible{
+
+    opacity:.6;
+}
+
+/* ------------------ */
+/* BUTTONS */
+/* ------------------ */
+
+button{
+
+    padding:12px 24px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    margin:10px;
+
+    transition:.25s;
+}
+
+button:hover{
+
+    transform:scale(1.05);
+}
+
+.yes{
+
+    background:#22c55e;
+
+    color:white;
+}
+
+.no{
+
+    background:#ef4444;
+
+    color:white;
+
+    position:relative;
+}
+
+/* ------------------ */
+/* CARDS */
+/* ------------------ */
+
+.card-container{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:20px;
+}
+
+.card{
+
+    width:260px;
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.12);
+}
+
+.card:hover{
+
+    transform:
+    translateY(-5px);
+}
+
+.card img{
+
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+}
+
+.card h3{
+
+    margin:0;
+
+    padding:15px;
+}
+
+.food-card{
+
+    padding:20px;
+}
+
+/* ------------------ */
+/* CUP PONG */
+/* ------------------ */
+
+#cupGame{
+
+    width:100%;
+
+    max-width:700px;
+
+    height:400px;
+
+    margin:auto;
+
+    position:relative;
+}
+
+#cupRow{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:35px;
+
+    margin-top:20px;
+}
+
+.cup{
+
+    width:70px;
+
+    height:90px;
+
+    background:#dc2626;
+
+    border-radius:
+    0 0 25px 25px;
+
+    transition:.3s;
+}
+
+.cup.hit{
+
+    opacity:.25;
+
+    transform:
+    translateY(15px);
+}
+
+#ball{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    background:#f59e0b;
+
+    position:absolute;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:
+    translateX(-50%);
+
+    cursor:pointer;
+
+    touch-action:none;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.2);
+}
+
+#pongStatus{
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    margin-top:15px;
+}
+
+/* ------------------ */
+/* SCRATCH CARD */
+/* ------------------ */
+
+.scratch-wrapper{
+
+    position:relative;
+
+    width:95%;
+
+    max-width:650px;
+
+    height:750px;
+
+    margin:auto;
+}
+
+#hiddenMessage{
+
+    position:absolute;
+
+    inset:0;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    overflow-y:auto;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.15);
+}
+
+#scratchCanvas{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:20px;
+
+    touch-action:none;
+}
+
+/* ------------------ */
+/* SPIDERMAN */
+/* ------------------ */
+
+.spiderman-img{
+
+    width:100%;
+
+    max-width:320px;
+
+    border-radius:15px;
+
+    margin:15px 0;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.15);
+}
+
+/* ------------------ */
+/* SUMMARY */
+/* ------------------ */
+
+#finalSummary{
+
+    background:#f0fffc;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    margin-top:20px;
+
+    line-height:1.7;
+}
+
+hr{
+
+    margin:20px 0;
+}
+
+/* ------------------ */
+/* MOBILE */
+/* ------------------ */
+
+@media(max-width:700px){
+
+    .hero-img{
+
+        width:220px;
+    }
+
+    .waiting-img{
+
+        width:120px;
+    }
+
+    .card{
+
+        width:90%;
+    }
+
+    .scratch-wrapper{
+
+        height:800px;
+    }
+}

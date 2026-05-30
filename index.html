@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Date Proposal Simulator</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================================= -->
+<!-- PAGE 1 -->
+<!-- ================================= -->
+
+<div id="page1" class="page active">
+
+    <img
+        src="spongebob.jpg"
+        class="hero-img"
+        alt="Spongebob">
+
+    <img
+        src="spongebob-waiting.jpg"
+        id="waitingImg"
+        class="waiting-img"
+        alt="Spongebob Waiting">
+
+    <h1>Vanessa</h1>
+
+    <h2>
+        Would you like to go on a date with me?
+    </h2>
+
+    <button
+        class="yes"
+        onclick="startCupPong()">
+
+        Yes
+
+    </button>
+
+    <button
+        id="noBtn"
+        class="no"
+        onmouseover="moveButton()"
+        ontouchstart="moveButton()">
+
+        No
+
+    </button>
+
+</div>
+
+<!-- ================================= -->
+<!-- PAGE 2 -->
+<!-- ================================= -->
+
+<div id="page2" class="page">
+
+    <h1>
+        🏓 Cup Pong Challenge
+    </h1>
+
+    <p>
+        You get 3 shots.
+
+        <br><br>
+
+        Make all 3 to advance 😎
+    </p>
+
+    <div id="cupGame">
+
+        <div id="cupRow">
+
+            <div
+                class="cup"
+                id="cup1">
+            </div>
+
+            <div
+                class="cup"
+                id="cup2">
+            </div>
+
+            <div
+                class="cup"
+                id="cup3">
+            </div>
+
+        </div>
+
+        <div id="ball">
+        </div>
+
+    </div>
+
+    <p id="pongStatus">
+
+        Drag the ball and release
+        to shoot.
+
+    </p>
+
+</div>
+
+<!-- ================================= -->
+<!-- PAGE 3 -->
+<!-- ================================= -->
+
+<div id="page3" class="page">
+
+    <h1>
+        Pick Our Next Adventure 😎
+    </h1>
+
+    <div class="card-container">
+
+        <div
+            class="card"
+            onclick="pickAdventure('Biscuits & Baskets')">
+
+            <img src="biscuit.jpg">
+
+            <h3>
+                🥞 Biscuits & Baskets
+            </h3>
+
+        </div>
+
+        <div
+            class="card"
+            onclick="pickAdventure('Murphys Mini Golf')">
+
+            <img src="murphys.jpg">
+
+            <h3>
+                ⛳ Murphys Mini Golf
+            </h3>
+
+        </div>
+
+        <div
+            class="card"
+            onclick="pickAdventure('Moaning Caverns')">
+
+            <img src="caverns.jpg">
+
+            <h3>
+                🕳️ Moaning Caverns
+            </h3>
+
+        </div>
+
+        <div
+            class="card"
+            onclick="pickAdventure('Pinnacles')">
+
+            <img src="pinnacles.jpg">
+
+            <h3>
+                🥾 Pinnacles
+            </h3>
+
+        </div>
+
+        <div
+            class="card"
+            onclick="pickAdventure('Santa Cruz')">
+
+            <img src="santacruz.jpg">
+
+            <h3>
+                🌊 Santa Cruz
+            </h3>
+
+        </div>
+
+        <div
+            class="card"
+            onclick="pickAdventure('Calaveras Big Trees')">
+
+            <img src="calaveras.jpg">
+
+            <h3>
+                🌲 Calaveras Big Trees
+            </h3>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================================= -->
+<!-- PAGE 4 -->
+<!-- ================================= -->
+
+<div id="page4" class="page">
+
+    <h1>
+        What Sounds Good To Eat?
+    </h1>
+
+    <div class="card-container">
+
+        <div
+            class="card food-card"
+            onclick="pickFood('Mexican')">
+
+            <h3>🌮 Mexican</h3>
+
+        </div>
+
+        <div
+            class="card food-card"
+            onclick="pickFood('Italian')">
+
+            <h3>🍝 Italian</h3>
+
+        </div>
+
+        <div
+            class="card food-card"
+            onclick="pickFood('Pizza')">
+
+            <h3>🍕 Pizza</h3>
+
+        </div>
+
+        <div
+            class="card food-card"
+            onclick="pickFood('Breakfast')">
+
+            <h3>🥞 Breakfast</h3>
+
+        </div>
+
+        <div
+            class="card food-card"
+            onclick="pickFood('Sushi')">
+
+            <h3>🍣 Sushi</h3>
+
+        </div>
+
+        <div
+            class="card food-card"
+            onclick="pickFood('American')">
+
+            <h3>🍔 American</h3>
+
+        </div>
+
+        <div
+            class="card food-card"
+            onclick="pickFood('Steakhouse')">
+
+            <h3>🥩 Steakhouse</h3>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================================= -->
+<!-- PAGE 5 -->
+<!-- ================================= -->
+
+<div id="page5" class="page">
+
+    <h1>
+        Final Reveal 😎
+    </h1>
+
+    <div class="scratch-wrapper">
+
+        <div id="hiddenMessage">
+
+            <h2>
+                Achievement Unlocked 🎉
+            </h2>
+
+            <p>
+                You completed
+                Luis's Date Proposal Simulator™
+            </p>
+
+            <hr>
+
+            <p>
+
+                Vanessa,
+
+                <br><br>
+
+                I know I could've
+                just sent a text.
+
+                <br><br>
+
+                But I thought asking
+                this way would be
+                a little more fun.
+
+                <br><br>
+
+                Thanks for actually
+                making it all the way
+                through this thing.
+
+                <br><br>
+
+                I'd really enjoy
+                spending some time
+                with you.
+
+                <br><br>
+
+                &lt;3
+
+            </p>
+
+            <hr>
+
+            <h2>
+                Presentation Topic
+            </h2>
+
+            <h3>
+                Why Vanessa Should
+                Go On A Date With Luis
+            </h3>
+
+            <img
+                src="spiderman-presentation.jpg"
+                class="spiderman-img"
+                alt="Spiderman Presentation">
+
+            <p>
+
+                Key Findings
+
+                <br><br>
+
+                • It would be fun
+
+                <br>
+
+                • Food will be involved
+
+                <br>
+
+                • You survived
+                the cup pong challenge
+
+                <br>
+
+                • A whole website
+                was made for this
+
+                <br><br>
+
+                Conclusion
+
+                <br><br>
+
+                You should at least
+                consider it 😎
+
+            </p>
+
+            <hr>
+
+            <div id="finalSummary">
+            </div>
+
+            <button
+                class="yes"
+                onclick="sendChoice()">
+
+                Send My Choice
+
+            </button>
+
+        </div>
+
+        <canvas
+            id="scratchCanvas"
+            width="600"
+            height="700">
+        </canvas>
+
+    </div>
+
+    <p>
+        Scratch about 60%
+        of the screen to reveal everything 😎
+    </p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
